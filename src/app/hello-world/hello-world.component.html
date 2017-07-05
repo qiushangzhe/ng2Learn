@@ -1,0 +1,20 @@
+<form class="am-form">
+    <fieldset>
+        <legend>来个评论</legend>
+
+        <div class="am-form-group">
+            <label for="doc-ipt-email-1">你叫啥</label>
+            <input type="text" placeholder="输入评论者名称" #newUsername>
+        </div>
+
+        <div class="am-form-group">
+            <label for="doc-ipt-pwd-1">评论</label>
+            <textarea type="text" placeholder="评论" #newSay></textarea>
+        </div>
+
+        <button (click)="onSubmit(newUsername,newSay)">评论</button>
+    </fieldset>
+</form>
+<div style="padding:20px" *ngFor="let item of articles">
+    <app-article [article]="item"></app-article>
+</div>
